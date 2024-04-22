@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your E-commerce Website</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <!-- Your logo and navigation menu -->
+        <div id="cart">
+            <span>Cart: </span>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+    
+    <main>
+        <section>
+            <!-- Your product listing -->
+            <div class="product">
+                <h3>Lorem Ipsum Product</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </section>
+        
+        <section>
+            <!-- Your blog section -->
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Your footer content -->
+    </footer>
+
+    <script>
+        // Basic shopping cart functionality
+        const cartCount = document.getElementById('cart-count');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        let cartItems = 0;
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartItems++;
+                cartCount.textContent = cartItems;
+            });
+        });
+    </script>
+</body>
+</html>
